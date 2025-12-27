@@ -1,5 +1,6 @@
 import { useState } from "react";
 import companies from "./data/companies";
+import "./index.css";
 
 function App() {
   const [selectedCompanyIndex, setSelectedCompanyIndex] = useState(0);
@@ -10,19 +11,13 @@ function App() {
   const selectedAccount = accounts[selectedAccountIndex];
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div className="app">
       
       {/* Sidebar */}
-      <div
-        style={{
-          width: "220px",
-          borderRight: "1px solid #ddd",
-          padding: "20px"
-        }}
-      >
+      <div className="sidebar">
         <h2>EazyPayouts</h2>
 
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul>
           <li>Loads</li>
           <li>Statements</li>
           <li>Transactions</li>
@@ -30,12 +25,10 @@ function App() {
       </div>
 
       {/* Main Content */}
-      <div style={{ flex: 1, padding: "20px" }}>
+      <div className="main">
         
         {/* Top bar */}
-        <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
-          
-          {/* Company dropdown */}
+        <div className="top-bar">
           <select
             value={selectedCompanyIndex}
             onChange={(e) => {
@@ -50,7 +43,6 @@ function App() {
             ))}
           </select>
 
-          {/* Account dropdown */}
           <select
             value={selectedAccountIndex}
             onChange={(e) =>
@@ -66,13 +58,13 @@ function App() {
         </div>
 
         {/* Balance */}
-        <div style={{ marginTop: "20px" }}>
+        <div className="balance-card">
           <h3>Available Balance</h3>
           <p>₹ {selectedAccount.balance.toLocaleString()}</p>
         </div>
 
-        {/* Transactions Table (NOW DYNAMIC) */}
-        <table border="1" width="100%" style={{ marginTop: "20px" }}>
+        {/* Transactions Table */}
+        <table>
           <thead>
             <tr>
               <th>Date</th>
