@@ -3,6 +3,10 @@ import companies from "./data/companies";
 
 function App() {
   const [selectedCompanyIndex, setSelectedCompanyIndex] = useState(0);
+  const [selectedAccountIndex, setSelectedAccountIndex] = useState(0);
+
+  const selectedCompany = companies[selectedCompanyIndex];
+  const accounts = selectedCompany.accounts;
 
   return (
     <div style={{ display: "flex", height: "100vh" }}>
@@ -30,12 +34,13 @@ function App() {
         {/* Top bar */}
         <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
           
-          {/* Company dropdown (CONNECTED TO DATA) */}
+          {/* Company dropdown */}
           <select
             value={selectedCompanyIndex}
-            onChange={(e) =>
-              setSelectedCompanyIndex(Number(e.target.value))
-            }
+            onChange={(e) => {
+              setSelectedCompanyIndex(Number(e.target.value));
+              setSelectedAccountIndex(0); // reset account
+            }}
           >
             {companies.map((company, index) => (
               <option key={index} value={index}>
@@ -44,19 +49,28 @@ function App() {
             ))}
           </select>
 
-          {/* Account dropdown (NOT CONNECTED YET) */}
-          <select>
-            <option>Account</option>
+          {/* Account dropdown (NOW CONNECTED) */}
+          <select
+            value={selectedAccountIndex}
+            onChange={(e) =>
+              setSelectedAccountIndex(Number(e.target.value))
+            }
+          >
+            {accounts.map((account, index) => (
+              <option key={index} value={index}>
+                {account.name}
+              </option>
+            ))}
           </select>
         </div>
 
-        {/* Balance */}
+        {/* Balance (still static for now) */}
         <div style={{ marginTop: "20px" }}>
           <h3>Available Balance</h3>
           <p>₹ 0</p>
         </div>
 
-        {/* Table */}
+        {/* Table (still static) */}
         <table border="1" width="100%" style={{ marginTop: "20px" }}>
           <thead>
             <tr>
