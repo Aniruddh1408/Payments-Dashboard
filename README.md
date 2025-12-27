@@ -6,6 +6,16 @@ The dashboard allows users to:
 3. View the available balance of the selected account.
 4. View a transactions table that updates dynamically.
 
+Project structure (Use these files to run the project) :
+src/
+│
+├── data/
+│   └── companies.js     # Mock API data
+│
+├── App.jsx              # Main dashboard logic
+├── index.css            # Styling
+└── main.jsx             # React entry point
+
 Steps:
 1. Clone the repository/copy the code of all the files.
 2. Install dependencies (npm install).
