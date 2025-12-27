@@ -142,3 +142,8 @@ tbody tr:hover {
 .balance-card {
   margin-bottom: 32px;
 }
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

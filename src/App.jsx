@@ -1,5 +1,6 @@
 import { useState } from "react";
 import companies from "./data/companies";
+import { FiDatabase, FiFileText, FiRepeat } from "react-icons/fi";
 import "./index.css";
 
 function App() {
@@ -17,11 +18,23 @@ function App() {
       <div className="sidebar">
         <h2>EazyPayouts</h2>
 
-        <ul>
-         <li className="active">Loads</li>
-         <li>Statements</li>
-         <li>Transactions</li>
-        </ul>
+<ul>
+  <li className="active">
+    <FiDatabase style={{ marginRight: "8px" }} />
+    Loads
+  </li>
+
+  <li>
+    <FiFileText style={{ marginRight: "8px" }} />
+    Statements
+  </li>
+
+  <li>
+    <FiRepeat style={{ marginRight: "8px" }} />
+    Transactions
+  </li>
+</ul>
+
 
       </div>
 
