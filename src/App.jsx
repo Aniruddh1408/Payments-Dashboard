@@ -1,8 +1,7 @@
-import companies from "./data/companies";
 import { useState } from "react";
+import companies from "./data/companies";
 
 function App() {
-  console.log(companies);
   const [selectedCompanyIndex, setSelectedCompanyIndex] = useState(0);
 
   return (
@@ -30,10 +29,22 @@ function App() {
         
         {/* Top bar */}
         <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
-          <select>
-            <option>Company</option>
+          
+          {/* Company dropdown (CONNECTED TO DATA) */}
+          <select
+            value={selectedCompanyIndex}
+            onChange={(e) =>
+              setSelectedCompanyIndex(Number(e.target.value))
+            }
+          >
+            {companies.map((company, index) => (
+              <option key={index} value={index}>
+                {company.name}
+              </option>
+            ))}
           </select>
 
+          {/* Account dropdown (NOT CONNECTED YET) */}
           <select>
             <option>Account</option>
           </select>
