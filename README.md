@@ -2,7 +2,7 @@ This project is a React-based Payments Dashboard UI.
 The dashboard allows users to:
 
 1. Select a company from a dropdown
-2.Select an account belonging to that company
+2. Select an account belonging to that company
 3. View the available balance of the selected account
 4. View a transactions table that updates dynamically
 
