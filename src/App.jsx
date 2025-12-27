@@ -7,6 +7,7 @@ function App() {
 
   const selectedCompany = companies[selectedCompanyIndex];
   const accounts = selectedCompany.accounts;
+  const selectedAccount = accounts[selectedAccountIndex];
 
   return (
     <div style={{ display: "flex", height: "100vh" }}>
@@ -49,7 +50,7 @@ function App() {
             ))}
           </select>
 
-          {/* Account dropdown (NOW CONNECTED) */}
+          {/* Account dropdown */}
           <select
             value={selectedAccountIndex}
             onChange={(e) =>
@@ -64,13 +65,13 @@ function App() {
           </select>
         </div>
 
-        {/* Balance (still static for now) */}
+        {/* Balance (NOW DYNAMIC) */}
         <div style={{ marginTop: "20px" }}>
           <h3>Available Balance</h3>
-          <p>₹ 0</p>
+          <p>₹ {selectedAccount.balance.toLocaleString()}</p>
         </div>
 
-        {/* Table (still static) */}
+        {/* Table (still static for now) */}
         <table border="1" width="100%" style={{ marginTop: "20px" }}>
           <thead>
             <tr>
