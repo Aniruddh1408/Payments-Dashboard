@@ -1,4 +1,4 @@
-This project is a React-based Payments Dashboard UI built as part of a frontend assignment.
+This project is a React-based Payments Dashboard UI.
 The dashboard allows users to:
 
 1. Select a company from a dropdown
