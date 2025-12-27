@@ -1,4 +1,10 @@
+import companies from "./data/companies";
+import { useState } from "react";
+
 function App() {
+  console.log(companies);
+  const [selectedCompanyIndex, setSelectedCompanyIndex] = useState(0);
+
   return (
     <div style={{ display: "flex", height: "100vh" }}>
       
