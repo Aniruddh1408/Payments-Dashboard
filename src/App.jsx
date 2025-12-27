@@ -40,7 +40,7 @@ function App() {
             value={selectedCompanyIndex}
             onChange={(e) => {
               setSelectedCompanyIndex(Number(e.target.value));
-              setSelectedAccountIndex(0); // reset account
+              setSelectedAccountIndex(0);
             }}
           >
             {companies.map((company, index) => (
@@ -65,13 +65,13 @@ function App() {
           </select>
         </div>
 
-        {/* Balance (NOW DYNAMIC) */}
+        {/* Balance */}
         <div style={{ marginTop: "20px" }}>
           <h3>Available Balance</h3>
           <p>₹ {selectedAccount.balance.toLocaleString()}</p>
         </div>
 
-        {/* Table (still static for now) */}
+        {/* Transactions Table (NOW DYNAMIC) */}
         <table border="1" width="100%" style={{ marginTop: "20px" }}>
           <thead>
             <tr>
@@ -82,12 +82,14 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-            </tr>
+            {selectedAccount.transactions.map((tx, index) => (
+              <tr key={index}>
+                <td>{tx.date}</td>
+                <td>₹ {tx.credit}</td>
+                <td>{tx.utr}</td>
+                <td>{tx.account}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
 

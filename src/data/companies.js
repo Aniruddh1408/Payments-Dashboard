@@ -38,7 +38,7 @@ const companies = [
   name: "FinCorp Solutions",
   accounts: [
     {
-      name: "Account 1",
+      name: "Account ",
       balance: 16000,
       transactions: [
         {
