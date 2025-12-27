@@ -14,7 +14,7 @@ const companies = [
           },
           {
             date: "04/05/2024 12:38 PM",
-            credit: 21337,
+            credit: 15000,
             utr: "CMS4136431811",
             account: "0104SLNEFTPL"
           }
@@ -38,7 +38,7 @@ const companies = [
   name: "FinCorp Solutions",
   accounts: [
     {
-      name: "Account ",
+      name: "Account 1",
       balance: 16000,
       transactions: [
         {

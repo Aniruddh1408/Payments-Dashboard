@@ -110,3 +110,35 @@ th {
 tr:hover {
   background-color: #f9fafb;
 }
+/* Sidebar active state */
+.sidebar li.active {
+  background-color: #eef2ff;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+/* Improve dropdown focus */
+select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+/* Balance emphasis */
+.balance-card p {
+  letter-spacing: 0.5px;
+}
+
+/* Table polish */
+tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Section spacing */
+.balance-card {
+  margin-bottom: 32px;
+}

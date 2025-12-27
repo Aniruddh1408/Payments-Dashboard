@@ -18,10 +18,11 @@ function App() {
         <h2>EazyPayouts</h2>
 
         <ul>
-          <li>Loads</li>
-          <li>Statements</li>
-          <li>Transactions</li>
+         <li className="active">Loads</li>
+         <li>Statements</li>
+         <li>Transactions</li>
         </ul>
+
       </div>
 
       {/* Main Content */}
