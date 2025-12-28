@@ -20,7 +20,7 @@ src/
 
 
 Steps:
-1. Clone the repository/copy the code of all the files.
+1. Clone the repository/copy the code of files in the project structure(refer above structure).
 2. Install dependencies (npm install).
 3. Run the development server (npm run dev).
 4. Open the URL shown in the terminal.
